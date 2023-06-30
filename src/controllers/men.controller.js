@@ -66,4 +66,9 @@ router.get("/:id", async (req, res) => {
         return res.status(500).send(err.message)
     }
 })
+
+router.get("",(req,res)=>{
+    res.send("hi");
+});
+
 module.exports = router;

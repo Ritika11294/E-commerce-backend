@@ -3,11 +3,11 @@ const cors = require('cors');
 const connect = require('./src/configs/db');
 const port = process.env.PORT || 3001;
 
-const menController = require('./src/controllers/men.controller');
+const menController = require('./src/controllers/men.controller')
 const womenController = require('./src/controllers/women.controller');
 const cartController = require('./src/controllers/cart.controller');
 
-const {register, login} = require('./src/controllers/auth.controller')
+const {register, login} = require('./src/controllers/auth.controller');
 
 const app = express();
 app.use(express.json());
