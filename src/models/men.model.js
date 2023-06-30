@@ -10,6 +10,8 @@ const menProductSchema = new mongoose.Schema({
 },{ 
     versionKey: false,
     timestamps:true,
-})
+});
+
+mongoose.set('strictQuery', false);
 
 module.exports = mongoose.model("menProduct", menProductSchema)
