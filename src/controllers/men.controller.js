@@ -67,8 +67,9 @@ const MenProduct = require('../models/men.model');
 //     }
 // })
 
-router.get("/aman",(req,res)=>{
-    res.send("hi");
+router.get("/aman",async(req,res)=>{
+    const data = await MenProduct.find();
+    res.json(data);
 });
 
 module.exports = router;
