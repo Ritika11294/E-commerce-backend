@@ -20,6 +20,11 @@ app.use("/womenProducts", womenController);
 app.use("/cart", cartController);
 
 
+app.get('/', (req, res) => {
+    res.send("hello world")
+})
+
+
 app.listen(port, async function () {
     try{
         await connect();
