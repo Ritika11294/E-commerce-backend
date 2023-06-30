@@ -15,11 +15,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// app.post("/register", register);
-// app.post("/login", login)
+app.post("/register", register);
+app.post("/login", login)
 app.use("/menProducts", menController);
-// app.use("/womenProducts", womenController);
-// app.use("/cart", cartController);
+app.use("/womenProducts", womenController);
+app.use("/cart", cartController);
 
 
 app.get('/', (req, res) => {

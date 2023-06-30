@@ -23,4 +23,6 @@ userSchema.methods.checkPassword = function(password) {
     return bcrypt.compareSync(password, this.password);
 };
 
+mongoose.set('strictQuery', false);
+
 module.exports = mongoose.model("user", userSchema)
